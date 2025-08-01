@@ -45,38 +45,62 @@
         "description": "Create an arrow component with Sass"
     },
     "HTML Div with Class": {
-        "prefix": "divt",
-        "body": [
-            "<div className=\"\">$0</div>"
-        ],
-        "description": "Creates a div with a className attribute and places cursor inside the div"
-    },
-    "comp": {
-            "prefix": "comp",
-            "body": [
-        "const ${1:${TM_FILENAME_BASE/(.)(.*)/${1:/capitalize}${2}/}} = () => {",
-        "  return (",
-        "    <div>${1:${TM_FILENAME_BASE/(.)(.*)/${1:/capitalize}${2}/}}</div>",
-        "  )",
-        "}",
-        "",
-        "export default ${1:${TM_FILENAME_BASE/(.)(.*)/${1:/capitalize}${2}/}}" 
-            ],
-            "description": "Create a component"
-        },
-    "compt": {
-            "prefix": "compt",
-            "body": [
-        "const ${1:${TM_FILENAME_BASE/(.)(.*)/${1:/capitalize}${2}/}} = () => {",
-        "  return (",
-        "    <div className=''>${1:${TM_FILENAME_BASE/(.)(.*)/${1:/capitalize}${2}/}}</div>",
-        "  )",
-        "}",
-        "",
-        "export default ${1:${TM_FILENAME_BASE/(.)(.*)/${1:/capitalize}${2}/}}" 
-            ],
-            "description": "Create a component with tailwind classname"
-        }
+		"prefix": "divt",
+		"body": [
+			"<div className=\"\">$0</div>"
+		],
+		"description": "Creates a div with a className attribute and places cursor inside the div"
+	},
+	"compt": {
+		"prefix": "compt",
+		"body": [
+      "const ${1:${TM_FILENAME_BASE/(.)(.*)/${1:/capitalize}${2}/}} = () => {",
+      "  return (",
+      "    <div className=''>${1:${TM_FILENAME_BASE/(.)(.*)/${1:/capitalize}${2}/}}</div>",
+      "  )",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE/(.)(.*)/${1:/capitalize}${2}/}}" 
+		],
+		"description": "Create a component with tailwind classname"
+	},
+	"tailwind fcc": {
+		"prefix": "fcc",
+		"body": [
+			"flex justify-center items-center"
+		],
+		"description": "tailwind fcc"
+	},
+	"mask linear-gradient opacity": {
+		"prefix": "linearopacity",
+		"body": [
+			"-webkit-mask-image: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 100%);",
+			"mask-image: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 100%);"
+		],
+		"description": "mask linear-gradient opacity"
+	},
+	"grid template": {
+		"prefix": "gridtemplate",
+		"body": [
+			"display: \"grid\",",
+			"gridTemplateRows: \"repeat(12, 1fr)\",",
+			"gridTemplateColumns: \"repeat(11, 1fr)\","
+		],
+		"description": "grid template"
+	},
+	"useEffect with empty dep": {
+		"prefix": "useEffect",
+		"body": [
+			"useEffect(() => {",
+			"",
+			"    ",
+			"    return () => {",
+			"",
+			"    };",
+			"}, []);"
+		],
+		"description": "useEffect with empty dep"
+	}
 
 
 }
